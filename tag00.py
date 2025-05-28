@@ -435,12 +435,12 @@ def main():
         
         if all_projects_data:
             df = pd.DataFrame(all_projects_data)
-            df.to_csv("rera_projects.csv", index=False)
-            print(f"Successfully scraped {len(all_projects_data)} projects. Data saved to rera_projects.csv")
+            df.to_csv("output.csv", index=False)
+            print(f"Successfully scraped {len(all_projects_data)} projects. Data saved to output.csv")
             
             try:
-                df.to_excel("rera_projects.xlsx", index=False)
-                print("Data also saved to rera_projects.xlsx")
+                df.to_excel("output.xlsx", index=False)
+                print("Data also saved to output.xlsx")
             except Exception as e:
                 print(f"Could not save Excel file: {str(e)}")
         else:
